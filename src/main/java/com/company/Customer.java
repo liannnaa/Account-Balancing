@@ -40,9 +40,9 @@ public class Customer {
 
     @Override
     public String toString() {
-        String id = "com.company.Customer ID: " + this.id;
-        String name = "com.company.Customer Name: " + this.name;
-        String balance = "com.company.Customer Balance: " + this.getBalance();
+        String id = "Customer ID: " + this.getId();
+        String name = "Customer Name: " + this.getName();
+        String balance = "Customer Balance: " + this.getBalance();
         return id + " | " + name + " | " + balance;
     }
 }
