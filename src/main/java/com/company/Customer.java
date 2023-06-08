@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.AccountRecord;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,8 +27,11 @@ public class Customer {
     }
 
     public int getBalance() {
-        //update this
-        return 0;
+        int balance = 0;
+        for(AccountRecord record : charges){
+            balance += record.getCharge();
+        }
+        return balance;
     }
 
     public List<AccountRecord> getCharges() {
@@ -35,7 +40,9 @@ public class Customer {
 
     @Override
     public String toString() {
-        //update this
-        return "Update me";
+        String id = "Customer ID: " + this.getId();
+        String name = "Customer Name: " + this.getName();
+        String balance = "Customer Balance: " + this.getBalance();
+        return id + " | " + name + " | " + balance;
     }
 }
