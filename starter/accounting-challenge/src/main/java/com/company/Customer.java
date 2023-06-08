@@ -25,8 +25,11 @@ public class Customer {
     }
 
     public int getBalance() {
-        //update this
-        return 0;
+        int balance = 0;
+        for(AccountRecord record : charges){
+            balance += record.getCharge();
+        }
+        return balance;
     }
 
     public List<AccountRecord> getCharges() {
@@ -35,7 +38,9 @@ public class Customer {
 
     @Override
     public String toString() {
-        //update this
-        return "Update me";
+        String id = "Customer ID: " + this.id;
+        String name = "Customer Name: " + this.name;
+        String balance = "Customer Balance: " + this.getBalance();
+        return id + "\n" + name + "\n" + balance + "\n";
     }
 }
