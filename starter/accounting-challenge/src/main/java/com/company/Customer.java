@@ -41,6 +41,6 @@ public class Customer {
         String id = "Customer ID: " + this.id;
         String name = "Customer Name: " + this.name;
         String balance = "Customer Balance: " + this.getBalance();
-        return id + "\n" + name + "\n" + balance + "\n";
+        return id + " | " + name + " | " + balance + " | ";
     }
 }
