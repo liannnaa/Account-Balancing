@@ -3,9 +3,9 @@ package com.company;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class CustomerTest {
+public class CustomerTest {
     @Test
-    void testGetBalance() {
+    public void testGetBalance() {
         Customer customer = new Customer();
         customer.setId(1);
         customer.setName("Test Customer");
@@ -28,7 +28,7 @@ class CustomerTest {
     }
 
     @Test
-    void testToString() {
+    public void testToString() {
         Customer customer = new Customer();
         customer.setId(1);
         customer.setName("Test Customer");

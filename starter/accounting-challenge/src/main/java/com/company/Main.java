@@ -46,11 +46,11 @@ public class Main {
                 customers.put(id, customer);
             }
 
-            AccountRecord record = new AccountRecord();
-            record.setCharge(charge);
-            record.setChargeDate(chargeDate);
+            AccountRecord account = new AccountRecord();
+            account.setCharge(charge);
+            account.setChargeDate(chargeDate);
 
-            customer.getCharges().add(record);
+            customer.getCharges().add(account);
         }
 
         List<Customer> uniqueCustomers = new ArrayList<>(customers.values());
