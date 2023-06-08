@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.AccountRecord;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,9 +40,9 @@ public class Customer {
 
     @Override
     public String toString() {
-        String id = "Customer ID: " + this.id;
-        String name = "Customer Name: " + this.name;
-        String balance = "Customer Balance: " + this.getBalance();
+        String id = "com.company.Customer ID: " + this.id;
+        String name = "com.company.Customer Name: " + this.name;
+        String balance = "com.company.Customer Balance: " + this.getBalance();
         return id + " | " + name + " | " + balance;
     }
 }
