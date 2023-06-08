@@ -27,8 +27,35 @@ public class Main {
     );
 
     public static void main(String[] args) {
-        //Update this
+        Map<Integer, Customer> customers = new HashMap<>();
+
+        for(String[] record : customerData){
+            int id = Integer.parseInt(record[0]);
+            String name = record[1];
+            int charge = Integer.parseInt(record[2]);
+            String chargeDate = record[3];
+
+            Customer customer;
+            if(customers.containsKey(id)) {
+                customer = customers.get(id);
+            } else {
+                customer = new Customer();
+                customer.setId(id);
+                customer.setName(name);
+
+                customers.put(id, customer);
+            }
+
+            AccountRecord record = new AccountRecord();
+            record.setCharge(charge);
+            record.setChargeDate(chargeDate);
+
+            customer.getCharges().add(record);
+        }
+
         System.out.println("Positive accounts:");
         System.out.println("Negative accounts:");
+
+        List<Customer> uniqueCustomers = new ArrayList<>(customers.values());
     }
 }
